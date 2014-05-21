@@ -1,4 +1,4 @@
-set in clientCompile.sqf
+//set in clientCompile.sqf
 
 
 
@@ -10,7 +10,7 @@ sellWeaponConfirmed = compile preprocessFileLineNumbers "client\systems\gunStore
 
 
 
-set in description.ext
+//set in description.ext
 
 
 
@@ -21,7 +21,17 @@ set in description.ext
 
 
 
-open your gunstore with 
+//set the magic key on client\clientEvents\onKeyPress.sqf
+
+ case 38: //L
+    {
+       
+       if (isnil "pressL") then {pressL = 0;}; if (pressL == 0) then {pressL = 1;player globalchat format ["Do you really want to buy your Loadout which costs %1, if yes press L again! ",geld];} else {pressL = 0;[]execVM"client\systems\gunStore\loadout.sqf";};
+    };
+
+
+
+//open your gunstore with 
 
 
 
