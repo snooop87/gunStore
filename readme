@@ -1,0 +1,30 @@
+set in clientCompile.sqf
+
+
+
+loadGunStore = compile preprocessFileLineNumbers "client\systems\gunStore\loadGunStore.sqf";
+
+loadSellConfirm = compile preprocessFileLineNumbers "client\systems\gunStore\loadSellConfirm.sqf";
+
+sellWeaponConfirmed = compile preprocessFileLineNumbers "client\systems\gunStore\sellWeaponConfirmed.sqf";
+
+
+
+set in description.ext
+
+
+
+
+#include "client\systems\gunStore\dialog\gunshop_settings.hpp"
+
+#include "client\systems\gunStore\dialog\gunshop_ConfirmSell.hpp"
+
+
+
+open your gunstore with 
+
+
+
+
+[] call loadGunStore;
+
