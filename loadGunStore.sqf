@@ -23,4 +23,4 @@ if(gsLocation == "gunstore2");
 if(gsLocation == "gunstore3");
 if(gsLocation == "gunstore4");
 if(gsLocation == "gunstore5");
-if(gsLocation == "gunstore6");
+if(gsLocation == "gunstore6");loadout[];

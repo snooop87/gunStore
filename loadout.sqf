@@ -44,8 +44,7 @@ dropweapon setPos [getPos player select 0,getPos player select 1,getPos player s
 _type = getNumber(_weaponCfg >> "type");
 if (_type in [1,2,4,5]) then {
     [_x]spawn fnc_load_weapon;}
-    else{_playerSlots = [player] call BIS_fnc_invSlotsEmpty;
-    if(_playerSlots select 4 <=1)then{player addMagazine _x;}else{dropweapon addMagazineCargo [_x,1];};
+    else{player addMagazine _x;
     };
           }foreach loadout;
  //item ende
